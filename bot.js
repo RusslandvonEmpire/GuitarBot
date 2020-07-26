@@ -32,7 +32,7 @@ client.once('ready', () => {
 	message.reply(`позвал всех!\n@everyone`);
 	}
         if (message.content === "Олег") {
-        message.reply("Олег насрал на этого бота");
+        message.reply("Олег насрал на себя и на этого бота");
         }
 });
 
