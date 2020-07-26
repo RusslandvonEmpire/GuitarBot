@@ -31,6 +31,9 @@ client.once('ready', () => {
 	if (message.content === `${prefix}everyone`) {
 	message.reply(`позвал всех!\n@everyone`);
 	}
+        if (message.content === "Олег") {
+        message.reply("Олег насрал на этого бота");
+        }
 });
 
 client.login(token);
