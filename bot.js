@@ -29,8 +29,12 @@ client.once('ready', () => {
 	message.channel.send(`Все команды:\n${prefix}ping - Понг!\n${prefix}server - информация о сервере\n${prefix}user - информация о пользователе\n${prefix}bot - информация о боте\n${prefix}everyone - позвать всех участников`);
 	}
 	if (message.content === `${prefix}everyone`) {
-	message.reply(`позвал всех!\n@everyone`);
+	if(message.member.hasPermission("MENTION_EVERYONE")){
+        message.reply(`позвал всех!\n@everyone`);
 	}
+        else {
+        message.reply(" не имеет права звать всех!");
+        }
         if (message.content === "Олег") {
         message.reply("Олег насрал на себя и на этого бота");
         }
