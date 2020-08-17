@@ -29,15 +29,18 @@ client.once('ready', () => {
 	message.channel.send(`Все команды:\n${prefix}ping - Понг!\n${prefix}server - информация о сервере\n${prefix}user - информация о пользователе\n${prefix}bot - информация о боте\n${prefix}everyone - позвать всех участников`);
 	}
 	if (message.content === `${prefix}everyone`) {
-	if(message.member.hasPermission("MENTION_EVERYONE")){
-        message.reply(`позвал всех!\n@everyone`);
+		if(message.member.hasPermission("MENTION_EVERYONE")){
+        	message.reply(`позвал всех!\n@everyone`);
+		}
+        	else {
+        	message.reply("Бот не имеет прав звать всех!");
+        	}
 	}
-        else {
-        message.reply(" не имеет права звать всех!");
-        }
-        if (message.content === "Олег") {
-        message.reply("Олег насрал на себя и на этого бота");
-        }
+  	if (message.content === "Олег") {
+  	message.reply("Пасхалка!\nОлег насрал на себя и на этого бота");
+  	}
+	if (message.content === `${prefix}developer`) {
+	message.channel.send(`Поздравляем! Вы разработчик!\nСсылка на исходный код`)
 });
 
 client.login(token);
