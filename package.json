@@ -1,6 +1,6 @@
 {
   "name": "GuitarBot",
-  "version": "1.0.0",
+  "version": "1.0.0alpha",
   "description": "",
   "main": "bot.js",
   "scripts": {
